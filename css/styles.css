@@ -1,0 +1,223 @@
+body {
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Убирает точки в списке */
+.list {
+  list-style: none;
+  font-style: normal;
+}
+
+/* Убирает подчёркивание в ссылках */
+.link,
+.header-logo {
+  text-decoration: none;
+}
+
+/* Переменные цвета */
+:root {
+  --fon-color: #e5e5e5;
+  --header-color: #ffff;
+  --footer-color: #2f303a;
+  --link-color: #2196f3;
+}
+
+/* Типовые фоны */
+.header {
+  background-color: var(--header-color);
+}
+.hero {
+  background-color: var(--footer-color);
+}
+.feature,
+.picture {
+  background-color: var(--header-color);
+}
+.teams {
+  background-color: #f5f4fa;
+}
+.footer {
+  background-color: var(--footer-color);
+}
+
+/* Шапка. Цвет ссылки в шапке при наведении курсора, при работе Tab */
+.link:hover,
+.link:focus {
+  color: var(--link-color);
+}
+.list .current {
+  color: var(--link-color);
+}
+
+/* Шапка. Шрифт логотипа. Web */
+.web {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: "Raleway";
+  color: var(--link-color);
+  line-height: 1.17;
+}
+
+/* Шапка. Шрифт логотипа. Studio */
+.studio {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: "Raleway";
+  color: var(--header-color);
+  line-height: 1.17;
+}
+
+/* Шапка. Шрифт логотипа */
+.header-logo {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Raleway";
+  color: #212121;
+  line-height: 1.17;
+}
+
+/* Шапка. Шрифт и цвет ссылок */
+.header-link {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+/* Шапка. Шрифт и цвет контактов */
+.header-mail,
+.header-tel {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+/* Заголовок. Шрифт и цвет кнопки */
+.hero-btn {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Roboto";
+  letter-spacing: 0.06em;
+  background-color: var(--link-color);
+  color: var(--header-color);
+  line-height: 1.88;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Заголовок. Шрифт и цвет */
+.hero-property {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--header-color);
+  line-height: 1.36;
+  text-align: center;
+}
+
+/* Особенности. Шрифт и цвет заголовков */
+.feature-property {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #212121;
+  line-height: 1.17;
+}
+
+/* Особенности. Шрифт и цвет текста */
+.feature-text {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  line-height: 1.71;
+}
+
+/* Чем мы занимаемся. Шрифт и цвет текста */
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #212121;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* Команда. Шрифт и цвет заголовков */
+.teams-property {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #212121;
+  line-height: 1.17;
+}
+
+/* Команда. Шрифт и цвет текста */
+.teams-text {
+  letter-spacing: 0.03em;
+  color: #757575;
+  line-height: 1.71;
+}
+
+/* Подвал. Шрифт логотипа */
+.header-logo {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Raleway";
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+/* Подвал. Шрифт и цвет контактов */
+.footer-adress {
+  font-size: 14px;
+  color: var(--header-color);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+/* Подвал. Шрифт и цвет контактов */
+.footer-mail,
+.footer-tel {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+/* Кнопки фильтра. Шрифт и цвет кнопки */
+.filter-btn {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: #212121;
+  line-height: 1.63;
+  cursor: pointer;
+}
+
+/* Кнопки фильтра. Цвет ссылки в шапке при наведении курсора и работе Tab */
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: #2196f3;
+  color: var(--header-color);
+}
+
+/* Наши проекты. Шрифт и цвет заголовков */
+.project-property {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #212121;
+  line-height: 2;
+}
+
+/* Наши проекты. Шрифт и цвет текста */
+.project-text {
+  letter-spacing: 0.03em;
+  color: #757575;
+  line-height: 1.88;
+}
