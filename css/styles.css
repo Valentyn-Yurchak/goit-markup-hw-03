@@ -1,21 +1,6 @@
-body {
-  color: #212121;
-  font-family: "Roboto", sans-serif;
-}
+/* --------------------------------БАЗОВЫЕ НАСТРОЙКИ-------------------------------- */
 
-/* Убирает точки в списке */
-.list {
-  list-style: none;
-  font-style: normal;
-}
-
-/* Убирает подчёркивание в ссылках */
-.link,
-.header-logo {
-  text-decoration: none;
-}
-
-/* Переменные цвета */
+/* ПЕРЕМЕННЫЕ ЦВЕТА */
 :root {
   --fon-color: #e5e5e5;
   --header-color: #ffff;
@@ -23,34 +8,123 @@ body {
   --link-color: #2196f3;
 }
 
-/* Типовые фоны */
-.header {
-  background-color: var(--header-color);
-}
-.hero {
-  background-color: var(--footer-color);
-}
-.feature,
-.picture {
-  background-color: var(--header-color);
-}
-.teams {
-  background-color: #f5f4fa;
-}
-.footer {
-  background-color: var(--footer-color);
+/* БАЗОВЫЕ СТИЛИ */
+body {
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
-/* Шапка. Цвет ссылки в шапке при наведении курсора, при работе Tab */
+/* СВОЙСТВА СЕКЦИЙ */
+.header {
+  background-color: var(--header-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.hero {
+  background-color: var(--footer-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.feature {
+  background-color: var(--fon-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.picture {
+  background-color: var(--fon-color);
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+
+.teams {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.footer {
+  background-color: var(--footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project {
+  background-color: var(--header-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* ОБНУЛЕНИЕ МАРДЖИНОВ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* ОБНУЛЕНИЕ МАРДЖИНОВ */
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+/* ОБЪЯВЛЕНИЕ КАРТИНОК БЛОЧНЫМ ЭЛЕМЕНТОМ */
+img {
+  display: block;
+}
+
+/* СВОЙСТВО КОНТЕЙНЕРА */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* outline: 2px solid red; */
+}
+
+/* УБИРАЕТ ТОЧКИ В СПИСКЕ */
+.list {
+  list-style: none;
+  font-style: normal;
+}
+
+/* УБИРАЕТ ПОДЧЁРКИВАНИЕ ССЫЛОК */
+.link {
+  text-decoration: none;
+}
+
 .link:hover,
 .link:focus {
   color: var(--link-color);
 }
+
+/* --------------------------------STUDIO. ШАПКА-------------------------------- */
+
 .list .current {
   color: var(--link-color);
 }
 
-/* Шапка. Шрифт логотипа. Web */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-connect {
+  margin-left: auto;
+}
+
 .web {
   font-size: 26px;
   font-weight: 700;
@@ -60,7 +134,6 @@ body {
   line-height: 1.17;
 }
 
-/* Шапка. Шрифт логотипа. Studio */
 .studio {
   font-size: 26px;
   font-weight: 700;
@@ -70,16 +143,16 @@ body {
   line-height: 1.17;
 }
 
-/* Шапка. Шрифт логотипа */
 .header-logo {
   font-size: 26px;
   font-weight: 700;
   font-family: "Raleway";
   color: #212121;
   line-height: 1.17;
+  margin-right: 93px;
+  text-decoration: none;
 }
 
-/* Шапка. Шрифт и цвет ссылок */
 .header-link {
   font-size: 14px;
   font-weight: 500;
@@ -87,16 +160,42 @@ body {
   color: #212121;
 }
 
-/* Шапка. Шрифт и цвет контактов */
-.header-mail,
-.header-tel {
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-mail {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #757575;
 }
 
-/* Заголовок. Шрифт и цвет кнопки */
+.header-tel {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-left: 50px;
+}
+
+/* --------------------------------STUDIO. ЗАГОЛОВОК-------------------------------- */
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--header-color);
+  line-height: 1.36;
+  text-align: center;
+  width: 696px;
+  margin-bottom: 30px;
+}
 .hero-btn {
   font-size: 16px;
   font-weight: 700;
@@ -106,29 +205,34 @@ body {
   color: var(--header-color);
   line-height: 1.88;
   cursor: pointer;
-  position: relative;
+  min-height: 50px;
+  min-width: 200px;
+  border: 0px;
+  border-radius: 4px;
 }
 
-/* Заголовок. Шрифт и цвет */
-.hero-property {
-  font-size: 44px;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  color: var(--header-color);
-  line-height: 1.36;
-  text-align: center;
+/* --------------------------------STUDIO. ОСОБЕННОСТИ-------------------------------- */
+
+.feature-list {
+  display: flex;
 }
 
-/* Особенности. Шрифт и цвет заголовков */
+.feature-item {
+  width: 270px;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .feature-property {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.03em;
   color: #212121;
   line-height: 1.17;
+  margin-bottom: 10px;
 }
 
-/* Особенности. Шрифт и цвет текста */
 .feature-text {
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -136,7 +240,8 @@ body {
   line-height: 1.71;
 }
 
-/* Чем мы занимаемся. Шрифт и цвет текста */
+/* --------------------------------STUDIO. ЧЕМ МЫ ЗАНИМАЕМСЯ-------------------------------- */
+
 .heading {
   font-size: 36px;
   font-weight: 700;
@@ -144,24 +249,44 @@ body {
   color: #212121;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
-/* Команда. Шрифт и цвет заголовков */
+.picture-list {
+  display: flex;
+}
+
+.picture-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* --------------------------------STUDIO. НАША КОМАНДА-------------------------------- */
+
+.teams-list {
+  display: flex;
+}
+
+.teams-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .teams-property {
   font-weight: 500;
   letter-spacing: 0.03em;
   color: #212121;
   line-height: 1.17;
+  text-align: center;
 }
 
-/* Команда. Шрифт и цвет текста */
 .teams-text {
   letter-spacing: 0.03em;
   color: #757575;
   line-height: 1.71;
+  text-align: center;
 }
 
-/* Подвал. Шрифт логотипа */
+/* --------------------------------STUDIO. ПОДВАЛ-------------------------------- */
+
 .header-logo {
   font-size: 26px;
   font-weight: 700;
@@ -170,7 +295,6 @@ body {
   line-height: 1.71;
 }
 
-/* Подвал. Шрифт и цвет контактов */
 .footer-adress {
   font-size: 14px;
   color: var(--header-color);
@@ -178,7 +302,6 @@ body {
   line-height: 1.71;
 }
 
-/* Подвал. Шрифт и цвет контактов */
 .footer-mail,
 .footer-tel {
   font-size: 14px;
@@ -187,7 +310,19 @@ body {
   line-height: 1.71;
 }
 
-/* Кнопки фильтра. Шрифт и цвет кнопки */
+/* --------------------------------PORTFOLIO. КНОПКИ-------------------------------- */
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* СВОЙСТВА КНОПОК ФИЛЬТРА */
 .filter-btn {
   font-family: "Roboto";
   font-weight: 500;
@@ -196,17 +331,32 @@ body {
   background-color: #f5f4fa;
   color: #212121;
   line-height: 1.63;
+  padding: 6px 22px;
   cursor: pointer;
+  border: 0px;
+  border-radius: 4px;
 }
 
-/* Кнопки фильтра. Цвет ссылки в шапке при наведении курсора и работе Tab */
+/* ЦВЕТ КНОПОК ФИЛЬТРА ПРИ НАВЕДЕНИИ КУРСОРА И РАБОТЕ <TAB> */
 .filter-btn:hover,
 .filter-btn:focus {
   background-color: #2196f3;
   color: var(--header-color);
 }
 
-/* Наши проекты. Шрифт и цвет заголовков */
+/* --------------------------------PORTFOLIO. НАШИ ПРОЕКТЫ-------------------------------- */
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.project-item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
 .project-property {
   font-size: 18px;
   font-weight: 700;
@@ -215,7 +365,6 @@ body {
   line-height: 2;
 }
 
-/* Наши проекты. Шрифт и цвет текста */
 .project-text {
   letter-spacing: 0.03em;
   color: #757575;
