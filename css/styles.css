@@ -18,8 +18,9 @@ body {
 /* СВОЙСТВА СЕКЦИЙ */
 .header {
   background-color: var(--header-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
 }
 
 .hero {
@@ -29,13 +30,13 @@ body {
 }
 
 .feature {
-  background-color: var(--fon-color);
+  background-color: var(--header-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
 .picture {
-  background-color: var(--fon-color);
+  background-color: var(--header-color);
   padding-top: 0px;
   padding-bottom: 94px;
 }
@@ -266,6 +267,11 @@ img {
   display: flex;
 }
 
+.teams-item {
+  background-color: var(--header-color);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .teams-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -276,6 +282,8 @@ img {
   color: #212121;
   line-height: 1.17;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .teams-text {
@@ -283,9 +291,14 @@ img {
   color: #757575;
   line-height: 1.71;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 /* --------------------------------STUDIO. ПОДВАЛ-------------------------------- */
+
+.footer-logo {
+  padding-bottom: 20px;
+}
 
 .header-logo {
   font-size: 26px;
@@ -293,6 +306,10 @@ img {
   font-family: "Raleway";
   letter-spacing: 0.03em;
   line-height: 1.71;
+}
+
+.footer-item:not(:last-child) {
+  padding-bottom: 9px;
 }
 
 .footer-adress {
@@ -346,6 +363,13 @@ img {
 
 /* --------------------------------PORTFOLIO. НАШИ ПРОЕКТЫ-------------------------------- */
 
+.project-info {
+  width: 370px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -355,6 +379,11 @@ img {
 .project-item {
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.project-item:not(:nth-last-child(n + 4)) {
+  margin-bottom: 0px;
 }
 
 .project-property {
@@ -363,6 +392,7 @@ img {
   letter-spacing: 0.06em;
   color: #212121;
   line-height: 2;
+  margin-bottom: 4px;
 }
 
 .project-text {
